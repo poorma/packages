@@ -1,0 +1,63 @@
+<script type="text/javascript">
+    RED.nodes.registerType('lumosNode',{
+        category: 'function',
+        color: '#a6ebce',
+        defaults: {
+            name: {value:""},
+            description: {value:""}
+        },
+        inputs:2,
+        outputs:1,
+        icon: "*.png",
+        label: function() {
+            return this.name||"lumosNode";
+        }
+        // ,
+        // selectValues:function(){
+        //     var macid = $('#node-input-macIDs');
+        //     $.getJSON('Macids.json', function (data) {
+        //         $.each(data, function (key, entry) {
+        //             macid.append($('<option></option>').attr('value', entry.abbreviation).text(entry.name));
+        //             })
+        //         }
+        //     });
+    });
+</script>
+
+<script type="text/x-red" data-template-name="lumosNode">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+        <label for="node-input-description"><i class="icon-tag"></i> Description</label>
+        <input type="text" id="node-input-description" placeholder="Description"></div></br>
+        <div class='form-row'> 
+            <select type='text' id='node-input-areas'>
+                <option value='areas'>Areas</option>
+                <option value='deviceCommunicationControl'>Device Communication Control</option>
+                <option value='reinitializeDevice'>Reinitialize Device</option>
+                <option value='timeSync'>Time Sync</option>
+                <option value='whoIsExplicit'>Who Is explicit </option>
+                <option value='whoIs'>Who Is</option> 
+            </select> 
+            <select type='text' id='node-input-macIDs' align="center">
+                <option value='macid'>MacID</option>
+                <option value='deviceCommunicationControl'>Device Communication Control</option>
+                <option value='reinitializeDevice'>Reinitialize Device</option>
+                <option value='timeSync'>Time Sync</option>
+                <option value='whoIsExplicit'>Who Is explicit </option>
+                <option value='whoIs'>Who Is</option> 
+            </select> 
+            <select type='text' id='node-input-channels'>
+                <option value='channels'>Channels</option>
+                <option value='ch1'>CH1</option>
+                <option value='ch2'>CH2</option>
+                <option value='ch3'>CH3</option>
+                <option value='ch4'>CH4</option>
+            </select> 
+        </div>
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="lumosNode">
+    <p>A node acts like silvan's lunums device. can controle the light modules in the home. default 4 channels will be enabled</p>
+</script>

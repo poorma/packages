@@ -1,0 +1,21 @@
+{
+  "name": "node-red-contrib-lumosnode",
+  "version": "1.0.1",
+  "description": "creating LUMOS node for Node-Red",
+  "main": "index.js",
+  "scripts": {
+    "test": "silvan"
+  },
+  "keywords": [
+    "node-red",
+    "Silvan"
+  ],
+  "node-red": {
+    "nodes": {
+      "lumosNode": "lumos.js",
+      "addNum" : "addNum.js"
+    }
+  },
+  "author": "veer",
+  "license": "ISC"
+}
